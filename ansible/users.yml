@@ -2,7 +2,7 @@
 - name: "Creates user"
   user:
     name: "{{ item.name }}"
-    password: "{{ item.password }}"
+    password: "{{ item.password | default('') }}"
     shell: "{{ item.shell | default('/bin/bash') }}"
   with_items: users
 
