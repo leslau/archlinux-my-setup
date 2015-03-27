@@ -1,7 +1,16 @@
 ---
-- name: "Enables systemd-resolved service"
-  service: name=systemd-resolved.service enabled=yes state=started
-  when: network.dns is not defined
+- name: "Configures /etc/resolv.conf search domain"
+  lineinfile:
+    dest: /etc/resolv.conf
+    line: search {{ network.dns.search }}
+  when: network.dns is defined and network.dns.search is defined
+
+- name: "Configures /etc/resolv.conf name servers"
+  lineinfile:
+    dest: /etc/resolv.conf
+    line: nameserver {{ item }}
+  with_items: network.dns.nameservers
+  when: network.dns is defined
 
 - name: "Creates symbolic link from /run/systemd/resolve/resolv.conf to /etc/resolv.conf"
   file:

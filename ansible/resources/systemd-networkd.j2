@@ -2,16 +2,9 @@
 Name={{ item.name }}
 
 [Network]
-{% if item.dns is defined %}
-{% for dns in item.dns.split(',') %}
-DNS={{ dns }}
-{% endfor %}
-{% endif %}
 {% if item.address == 'dhcp' %}
 DHCP=v4
 {% else %}
-[Address]
 Address={{ item.address }}
-[Route]
-Gateway={{ item.gateway }}
 {% endif %}
+Gateway={{ item.gateway }}

@@ -1,8 +1,17 @@
 # https://wiki.archlinux.org/index.php/Network_configuration
 network:
+  hostname: soft021-143-vm01
   interfaces:
     #- { name: 'enp0s3', address: 'dhcp' }
-    - { name: 'enp0s3', address: '172.23.25.6/24', gateway: '172.23.25.254', dns: '172.23.1.1,172.23.1.10' }
+    - { name: 'enp0s3', address: '172.23.25.6/24', gateway: '172.23.25.254' }
+  # suppress it to use dns provided by isp. Configs /etc/resolv.conf
+  dns:
+    search: softplan.com.br
+    nameservers:
+      - 172.23.1.1
+      - 172.23.1.10
+
+
 
 # https://wiki.archlinux.org/index.php/beginners%27_guide#Prepare_the_storage_devices
 storage:
@@ -13,6 +22,7 @@ storage:
     - { size: '10g', type: 'ext4', mount: '/' }
     - { size: '512m', type: 'ext4', mount: '/boot' }
     - { size: '100%FREE', type: 'ext4', mount: '/home' }
+
 
 # https://wiki.archlinux.org/index.php/beginners%27_guide#Locale
 locale:

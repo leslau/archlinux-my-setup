@@ -1,0 +1,3 @@
+---
+- name: "Installs smbclient to mount samba shares"
+  pacman: name=smbclient
