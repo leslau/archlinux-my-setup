@@ -4,6 +4,7 @@
     name: "{{ item.name }}"
     password: "{{ item.password | default('') }}"
     shell: "{{ item.shell | default('/bin/bash') }}"
+    generate_ssh_key: yes
   with_items: users
 
 - name: "Updates users primary groups"

@@ -1,0 +1,13 @@
+---
+- name: "Create share dirs"
+  mount:
+    name: item.name
+    src: item.share
+    fstype: "{{ item.1.type }}"
+    opts: defaults
+    state: mounted
+  when: item.1.type != "swap"
+  with_indexed_items: storage.volumes
+
+
+//softplan.com.br/empresa/Troca                 /mnt/T          cifs            credentials=/root/sofplan.com.br.creds,iocharset=utf8,file_mode=0777,dir_mode=077 0 0

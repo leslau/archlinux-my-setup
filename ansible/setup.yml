@@ -5,5 +5,4 @@
     - include: network.yml
     - include: locale.yml
     - include: users.yml
-    - include: samba.yml
     - include: boot.yml
