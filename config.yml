@@ -48,8 +48,8 @@ packages:
     - gnome
   # https://aur.archlinux.org/packages
   aur:
-    - jre
-    - eclipse-jdk
+    - jdk
+    - eclipse-jee
 
 #eclipse:
 #  - { repository: 'http://dl.microsoft.com/eclipse/tfs/', feature: 'com.microsoft.tfs.client.eclipse.nl1.feature.feature.group' }
