@@ -37,7 +37,7 @@ locale:
 #  - The 'root' user allows a special param named 'ssh', which enables (or disables) ssh login. Default is 'no'.
 users:
   - { name: 'root', ssh: 'no', password: '$6$rounds=100000$WyP5nxv.aJO1.SQ1$uKJnrcDTzpI1hkAEErsBGH3AFuMpGCcW2d8zIMX5ClFSLQlcUbssq6q9iIjdjf1GNBveE6g5xIonyOrD82abA0' }
-  - { name: 'luciano', groups: 'adm,users,docker', sudo: 'passwordless', password: '$6$rounds=656000$7JlPYLVcnGL6LGGj$UB61v779Lzd05836UGeEjb8JycHj/g4BmzV8UHt.tGP.pWNxusFxvgGzhJ9luFehlqzHFi9RThPWvKJtV65dt0', dotfiles: 'https://github.com/andreptb/dotfiles.git' }
+  - { name: 'luciano', groups: 'adm,users,docker', sudo: 'passwordless', password: '$6$rounds=656000$7JlPYLVcnGL6LGGj$UB61v779Lzd05836UGeEjb8JycHj/g4BmzV8UHt.tGP.pWNxusFxvgGzhJ9luFehlqzHFi9RThPWvKJtV65dt0', dotfiles: 'https://github.com/leslau/dotfiles.git' }
 
 # https://wiki.archlinux.org/index.php/Samba#Client_configuration
 # samba:
@@ -52,11 +52,13 @@ packages:
     - vim
     - nano
     - wget
+    - curl
     - zsh
     - xorg-server
+    - xorg-server-utils
     - xorg-xinit
     - xorg-xrdb
-    - xf86-video-ati
+    - xf86-video-intel
     - gnome
     - gnome-power-manager
     - gnome-main-menu
@@ -83,17 +85,29 @@ packages:
     - gvfs
     - gvfs-smb
     - cmus
+    - remmina
     - libmad
-    - jitsi
     - firefox
     - xulrunner
     - pulseaudio
     - pulseaudio-alsa
     - pavucontrol
     - python-pip
+    - linphone
+    - pgadmin3
+    - maven
+    - npm
+    - rxvt-unicode
+    - lightdm
+    - conky
+    - mpd
+    - mpc
+    - ncmpcpp
+    - less
   aur:
     - atom-editor
     - virtualbox-ext-oracle
+    - lemonbar-git
 
 # Will enable services on boot
 services:
