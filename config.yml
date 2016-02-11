@@ -64,7 +64,6 @@ packages:
     - gtk2
     - gtk3
     - gtk-engine-murrine
-    - i3-wm
     - i3lock
     - i3status
     - conky
@@ -117,6 +116,7 @@ packages:
     - vivacious-colors
     - menutray
     - j4-dmenu-desktop
+    - i3-gaps-git
 
 # Will enable services on boot
 services:
