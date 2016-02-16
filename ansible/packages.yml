@@ -18,7 +18,12 @@
     with_items: packages.aur
     when: packages.aur is defined
     become: yes
-    become_user: andre
+    become_user: luciano
+
+  - name: "install packages from phyton library"
+    pip: name={{item}}
+    with_items: packages.pip
+    when: packages.pip is defined
 
   - name: "Enables configured services"
     service: "name={{item}}.service enabled=yes state=started"

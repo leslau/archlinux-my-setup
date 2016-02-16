@@ -39,13 +39,6 @@ users:
   - { name: 'root', ssh: 'no', password: '$6$rounds=100000$WyP5nxv.aJO1.SQ1$uKJnrcDTzpI1hkAEErsBGH3AFuMpGCcW2d8zIMX5ClFSLQlcUbssq6q9iIjdjf1GNBveE6g5xIonyOrD82abA0' }
   - { name: 'luciano', groups: 'adm,users,docker', sudo: 'passwordless', password: '$6$rounds=656000$7JlPYLVcnGL6LGGj$UB61v779Lzd05836UGeEjb8JycHj/g4BmzV8UHt.tGP.pWNxusFxvgGzhJ9luFehlqzHFi9RThPWvKJtV65dt0' }
 
-# https://wiki.archlinux.org/index.php/Samba#Client_configuration
-# samba:
-#   mount:
-#     - { path: '/mnt/empresa', src: '//softplan.com.br/empresa', username: 'sajwebversao', password: 'Softplan2012' }
-#     - { path: '/mnt/O', src: '//server21.softplan.com.br/O', username: 'sajwebversao', password: 'Softplan2012' }
-#     - { path: '/mnt/sajwebdev', src: '//sajwebdev.softplan.com.br/instaladores', username: 'sajwebversao', password: 'Softplan2012' }
-
 packages:
   # https://www.archlinux.org/packages/
   official:
@@ -87,12 +80,17 @@ packages:
     - mpc
     - acpi
     - xclip
+    - python-pip
   aur:
     - atom-editor
     - powerline-fonts-git
     - virtualbox-ext-oracle
     - jdk7
     - jdk
+  pip:
+    - awsebcli
+    - awscli
+    - thefuck
 
 # Will enable services on boot
 services:
