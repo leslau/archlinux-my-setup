@@ -54,19 +54,8 @@ packages:
     - wget
     - curl
     - zsh
-    - xorg-server
-    - xorg-server-utils
-    - xorg-xinit
-    - xorg-xrdb
     - xf86-video-intel
-    - xfce4-power-manager
-    - qiv
-    - gtk2
-    - gtk3
-    - gtk-engine-murrine
-    - i3lock
-    - i3status
-    - conky
+    - gnome
     - docker
     - rdesktop
     - alsa-utils
@@ -96,28 +85,16 @@ packages:
     - maven
     - npm
     - mpc
-    - dzen2
     - acpi
-    - nitrogen
-    - compton
-    - volwheel
-    - parcellite
-    - wicd
-    - notify-osd
-    - pcmanfm
-    - kodi
     - xclip
-    -	xscreensaver
   aur:
     - atom-editor
+    - powerline-fonts-git
     - virtualbox-ext-oracle
-    - rxvt-unicode-patched
-    - dmenu2
-    - vivacious-colors
-    - menutray
-    - j4-dmenu-desktop
-    - i3-gaps-git
+    - jdk7
+    - jdk
 
 # Will enable services on boot
 services:
   - docker
+  - gdm
